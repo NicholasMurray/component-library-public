@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DocsContainer } from '@storybook/addon-docs/blocks';
-import { MDXEmbedProvider } from 'mdx-embed';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -9,12 +7,5 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-  },
-  docs: {
-    container: ({ children, context }) => (
-      <DocsContainer context={context}>
-        <MDXEmbedProvider>{children}</MDXEmbedProvider>
-      </DocsContainer>
-    ),
   },
 };
